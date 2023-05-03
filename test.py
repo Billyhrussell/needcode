@@ -88,11 +88,21 @@
 # print(solution.twoSum(nums,target))
 
 
-def number_to_pwr(number, p):
-    answer = number
-    for index in range(p):
-        print("INDEX ", index)
-        answer *= number
-    return answer
+# def number_to_pwr(number, p):
+#     answer = number
+#     for index in range(p):
+#         print("INDEX ", index)
+#         answer *= number
+#     return answer
 
-print(number_to_pwr(10,4))
+# print(number_to_pwr(10,4))
+
+# p = {'q': 1, 'r':2}
+# q = {'q': 1}
+
+# print(p == q)
+
+# print(ord('t'))
+# print(ord('a'))
+count = [0] * 26
+print(count)
