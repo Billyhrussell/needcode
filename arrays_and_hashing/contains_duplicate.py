@@ -4,7 +4,7 @@
 
 # true if 2x
 # false if nothing repeated
-# [1,2,3,2]
+# [1,2,3]
 
 # my attempt
 def containsDuplicate(nums):
@@ -20,7 +20,7 @@ def containsDuplicate(nums):
 
 print(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))
 
-# neetcode solution 
+# neetcode solution
 def containsDuplicate2(nums: List[int]) -> bool:
     hashset = set()
 

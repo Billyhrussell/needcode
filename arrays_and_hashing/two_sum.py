@@ -65,3 +65,72 @@ print(solution.twoSum([3,2,4], 6))
 # solution = Solution()
 # print(solution.isAnagram(s,t))
 
+
+# want to add 2 nums together
+# [1,2,4,5,10,12]
+# select first and check if matches with every num behind
+# if not, pop num off and check w/remaining nums
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        first_num = nums[0]
+        ans = []
+
+        def find_ans(nums, target):
+            for num in nums[1:]:
+                if num + first_num == target:
+                    ans = [num, first_num]
+                    return ans
+
+            return False
+
+# SECOND_ATTEMPT
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        nums_copy = list(nums)
+        nums_sum = []
+        ans = []
+
+        while len(nums_sum) != 2:
+            first_num = nums_copy[0]
+            nums_copy.pop(0)
+
+            for num in nums_copy:
+                if num + first_num == target:
+                    nums_sum.append(num)
+                    nums_sum.append(first_num)
+
+        for i, n in enumerate(nums):
+            if n == nums_sum[0] or n == nums_sum[1]:
+                ans.append(i)
+        return ans
+
+nums = [3,2,4]
+target = 6
+
+solution = Solution()
+print(solution.twoSum(nums,target))
+
+# NEETCODE ANSWER
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        prevMap = {}  # val -> index
+
+        # for index, num in nums
+        for i, n in enumerate(nums):
+            diff = target - n           #difference = target - num
+            if diff in prevMap:         #if the difference is in the map,
+                return [prevMap[diff], i] #return the index
+            prevMap[n] = i                 #or add it to the map
