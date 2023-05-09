@@ -104,5 +104,22 @@
 
 # print(ord('t'))
 # print(ord('a'))
-count = [0] * 26
-print(count)
+# count = [0] * 26
+# print(count)
+# r = range(4)
+# for x in r:
+#     print(x)
+
+# # print(range(4))
+
+# correct_order = ["(", ")", "[", "]", "{", "}"]
+
+# print(correct_order[1])
+
+stack = [1]
+
+#
+# if not stack:
+#     print("not stack")
+
+print(stack[-1])

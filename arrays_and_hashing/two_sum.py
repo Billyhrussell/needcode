@@ -134,3 +134,49 @@ class Solution:
             if diff in prevMap:         #if the difference is in the map,
                 return [prevMap[diff], i] #return the index
             prevMap[n] = i                 #or add it to the map
+
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        prevMap = {}
+
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in prevMap:
+                return [prevMap[diff], i]
+            prevMap[num] = i
+
+
+
+
+
+
+
+
+# input: arr of int, nums
+# int, target
+# return indices of two nums, such that they add up to target
+# [2,7,11,15]
+
+def twoSum(nums, target):
+
+    map = {}
+
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in map:
+            return [map[diff], i]
+        map[num] = i
+
+# TWO-SUM
+# create a map to store key of num, value of index
+# enumerate over
+# set a difference
+# if diff in map, return map key and curr index
+# set index 

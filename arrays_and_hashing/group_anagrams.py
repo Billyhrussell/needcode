@@ -152,4 +152,52 @@ class Solution(object):
             # SET the value to the string that matches the array
 
         return ans.values()
-        # RETURN a list of values 
+        # RETURN a list of values
+
+
+import collections
+
+# create hashmap (empty)
+# key: 26 arrs of 0, changed to the amt of letters
+# value: the strs that match the key
+# return hashmap.values()
+
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+
+        ans = collections.defaultdict(list)
+        # initialize empty dict (no key errors)
+
+        for str in strs:
+            setList = [0] * 26
+            # setting list to 26 0's
+
+            for char in str:
+                setList[ord(char) - ord('a')] += 1
+
+            ans[tuple(setList)].append(str)
+
+        return ans.values()
+
+
+# create hashmap (key val pairs)
+# where key = arr of 26
+# where val = matching str to key
+
+def group_anagrams(strs):
+    ans = collections.defaultdict(list)
+
+    for str in strs:
+        lettersList = [0] * 26
+
+        for char in str:
+            lettersList[ord(char) - ord('a')] += 1
+
+        ans[tuple(lettersList)].append(str)
+
+    return ans.values()
+
