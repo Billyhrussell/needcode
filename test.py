@@ -118,8 +118,10 @@
 
 stack = [1]
 
-#
-# if not stack:
-#     print("not stack")
 
-print(stack[-1])
+if not stack:
+    print("not stack")
+if stack:
+    print("yes stack")
+
+# print(stack[-1])

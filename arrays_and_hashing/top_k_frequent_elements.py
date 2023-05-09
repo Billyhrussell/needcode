@@ -92,3 +92,30 @@ print(solution.topKFrequent(nums, k))
 # 5 | 2
 
 # then you have to return the 2 elements with the highest frequency from it (in this case i=1 and i=4)
+
+# input: int arr, nums
+#  int k,
+# return the k most frequent elements
+
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+
+        map = {}
+        freq = [[] for i in range(len(nums) + 1)]
+
+
+        for num in nums:
+            if num in map:
+                map[num] += 1
+            else:
+                map[num] = 1
+
+        for n, c in map.items(): 
+
+            freq[c].append(n)
+

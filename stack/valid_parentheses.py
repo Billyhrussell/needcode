@@ -70,3 +70,42 @@ class Solution(object):
             stack.pop()
 
         return not stack
+
+# given string w  {}, [], ()
+# determine if input string is valid
+# valid if open brackets closed by same type of bracket
+# must be closed in correct order
+# every close bracket has open bracket of same type
+
+class Solution(object):
+    def isValid(self, str):
+        """
+        :type s: str
+        :rtype: bool
+        """
+
+        valid = {'}' : '{',
+                ']' : '[',
+                ')' : '('}
+
+        stack = []
+
+        for s in str:
+            if s not in valid:
+                stack.append(s)
+                continue
+            if not stack or stack[-1] != valid[s]:
+                return False
+            stack.pop()
+
+        return not stack
+
+
+# iterate over string
+# if char not in valid_choice
+# add to stack
+# if not stack (if stack is empty)
+#           or if end of stack does not = valid_choice[char]
+# return false
+
+# WITH STACKS YOU MUST CHECK AT THE END

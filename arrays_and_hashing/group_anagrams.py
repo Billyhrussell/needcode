@@ -201,3 +201,28 @@ def group_anagrams(strs):
 
     return ans.values()
 
+
+# given: arr of strs
+# group anagrams together
+
+import collections
+
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+
+        ans = collections.defaultdict(list)
+
+        for str in strs:
+            arr = [0] * 26
+
+            for char in str:
+                arr[ord(char) - ord('a')] += 1
+
+            ans[tuple(arr)].append(str)
+
+        return ans.values()
+
