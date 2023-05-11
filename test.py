@@ -106,9 +106,9 @@
 # print(ord('a'))
 # count = [0] * 26
 # print(count)
-# r = range(4)
-# for x in r:
-#     print(x)
+r = range(2, 2)
+for x in r:
+    print(x)
 
 # # print(range(4))
 
@@ -116,12 +116,12 @@
 
 # print(correct_order[1])
 
-stack = [1]
+# stack = [1]
 
 
-if not stack:
-    print("not stack")
-if stack:
-    print("yes stack")
+# if not stack:
+#     print("not stack")
+# if stack:
+#     print("yes stack")
 
-# print(stack[-1])
+# # print(stack[-1])
