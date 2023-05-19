@@ -1,4 +1,5 @@
-
+# leetcode EASY?????
+# https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/description/
 # input: int arr (sequence)
 # determine if possible to obtain strictly increasaing sequence
 # by removing no more than 1 elem from arr
