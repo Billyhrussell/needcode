@@ -26,7 +26,7 @@
 #             return counter
 
 #         for str in strs:
-#             countList.append(countStr(str))
+#             countList.(countStr(str))
 
 #         # print(countList)
 

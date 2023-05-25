@@ -106,9 +106,9 @@
 # print(ord('a'))
 # count = [0] * 26
 # print(count)
-r = range(2, 2)
-for x in r:
-    print(x)
+# r = range(2, 2)
+# for x in r:
+#     print(x)
 
 # # print(range(4))
 
@@ -125,3 +125,8 @@ for x in r:
 #     print("yes stack")
 
 # # print(stack[-1])
+
+
+for i in range(9)[::2]:
+    print(i)
+
