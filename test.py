@@ -127,6 +127,16 @@
 # # print(stack[-1])
 
 
-for i in range(9)[::2]:
-    print(i)
+# for i in range(9)[::2]:
+#     print(i)
 
+# ans = ['abc', 'abc', 'c']
+# # print(max(ans))
+# print(len("abc"))
+
+str = "hzanvi"
+
+print(str.split("a"))
+
+arr = [1, 2, 3]
+print(arr[-1])
