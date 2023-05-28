@@ -134,9 +134,17 @@
 # # print(max(ans))
 # print(len("abc"))
 
-str = "hzanvi"
+# str = "hzanvi"
 
-print(str.split("a"))
+# print(str.split("a"))
 
-arr = [1, 2, 3]
-print(arr[-1])
+# arr = [1, 2, 3]
+# print(arr[-1])
+
+str = 'AAABBBABAB'
+print(str.split('A'))
+print(str.split('B'))
+
+a = str.split('A')
+
+print(len(max(a, key=len)))
