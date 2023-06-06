@@ -25,3 +25,29 @@ def characterReplacement(s, k):
 s = "ABAB"
 k = 2
 print(characterReplacement(s,k))
+
+
+class Solution(object):
+    def characterReplacement(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        maxlen, largestCount = 0, 0
+        counter = collections.Counter()
+
+
+        for idx in range(len(s)):
+            counter[s[idx]] += 1
+
+            #            = max(1, counter[2]] = a (2))
+            largestCount = max(largestCount, counter[s[idx]])
+            # lc = 2
+
+            # if   2 - 2 >= 2
+            if maxlen - largestCount >= k:
+                counter[s[idx - maxlen]] -= 1
+            else:
+                maxlen += 1
+        return maxlen
