@@ -142,3 +142,17 @@ cost = [1, 1, 3, 4]
 time = [3, 1, 2, 3]
 
 print(getMinCost(cost, time))
+
+
+import doSomething from "./doSomething"
+
+def main():
+    print("hi")
+    info = "123"
+    doSomething(info)
+
+
+def doSomething(x):
+    print("doing something")
+
+    print("what is x", x)
