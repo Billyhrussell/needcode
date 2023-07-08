@@ -8,9 +8,10 @@ def isHappy(n):
         return True
 
     used = [] #keep track of used, otherwise infinite loop
-    
+
     while n != 1:
 
+        # map takes two params, a function and the values to apply
         s = list(map(int,str(n)))
         tot = 0
 
