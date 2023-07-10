@@ -11,6 +11,7 @@ class Solution(object):
         dp = [False] * (len(s) + 1)
         # [False, False, False, False, False, False, False, False, False]
         dp[0] = True
+        # dp[0] is set to true since an empty string can ALWAYS be segmented into words in the dict 
         # [True, False, False, False, False, False, False, False, False]
 
         n = len(s)
@@ -68,6 +69,8 @@ class Solution(object):
 # i = 7
 # j : 0, 1, 2, 3, 4, 5, 6
 # s[j:i] = CATSAND, ATSAND, TSAND, TAND, AND, ND, D
+# [True, False, False, True, True, False, False, True, False, False]
+
 
 # i = 8
 # j : 0, 1, 2, 3, 4, 5, 6, 7
