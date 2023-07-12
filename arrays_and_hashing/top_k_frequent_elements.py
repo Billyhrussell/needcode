@@ -6,72 +6,72 @@
 # nums = [1,1,1,2,2,3], k = 2
 
 # my_solution
-def topKFrequent(nums, k):
-    """
-    :type nums: List[int]
-    :type k: int
-    :rtype: List[int]
-    """
+# def topKFrequent(nums, k):
+#     """
+#     :type nums: List[int]
+#     :type k: int
+#     :rtype: List[int]
+#     """
 
-    counter = {}
-    ans = []
+#     counter = {}
+#     ans = []
 
-    for num in nums:
-        if num in counter:
-            counter[num] += 1
-        else:
-            counter[num] = 1
+#     for num in nums:
+#         if num in counter:
+#             counter[num] += 1
+#         else:
+#             counter[num] = 1
 
-    for num in counter:
-        if counter[num] >= k:
-            ans.append(k)
+#     for num in counter:
+#         if counter[num] >= k:
+#             ans.append(k)
 
-    return ans
-
-
-# neetcode_solution with my notes
-
-class Solution:
-    def topKFrequent(self, nums, k):
-        count = {}
-        freq = [[] for i in range(len(nums) + 1)]
-        # freq = [[], [], [], [], [], [], []]
-
-        for n in nums:
-            count[n] = 1 + count.get(n, 0) #if key does not exist, set value to 0
+#     return ans
 
 
-        # count = {1: 3, 2: 2, 3: 1}
-        for n, c in count.items():
-            # count.items() = [(1, 3), (2, 2), (3, 1)]
-            # .items() is tuple for each key/val pair
-            # (n, c), (n, c), (n, c)
+# # neetcode_solution with my notes
 
-            freq[c].append(n)
+# class Solution:
+#     def topKFrequent(self, nums, k):
+#         count = {}
+#         freq = [[] for i in range(len(nums) + 1)]
+#         # freq = [[], [], [], [], [], [], []]
 
-        # freq = [[], [3], [2], [1], [], [], []]
+#         for n in nums:
+#             count[n] = 1 + count.get(n, 0) #if key does not exist, set value to 0
 
-        res = []
-        for i in range(len(freq) - 1, 0, -1):
-        # for i in range(start, stop, step)
-        # range(6, 0, -1)
-        # range is stepping BACK
-        # 6, 5, 4, 3, 2, 1
 
-            for n in freq[i]:
+#         # count = {1: 3, 2: 2, 3: 1}
+#         for n, c in count.items():
+#             # count.items() = [(1, 3), (2, 2), (3, 1)]
+#             # .items() is tuple for each key/val pair
+#             # (n, c), (n, c), (n, c)
 
-                # for a num inside of frequency arr
-                res.append(n)
-                # append num
-                if len(res) == k:
-                    print("res ", res)
-                    # if the length of the res == k
-                    return res
+#             freq[c].append(n)
 
-nums = [1,1,1,2,2,3]
-k = 2
-solution = Solution()
-print(solution.topKFrequent(nums, k))
+#         # freq = [[], [3], [2], [1], [], [], []]
+
+#         res = []
+#         for i in range(len(freq) - 1, 0, -1):
+#         # for i in range(start, stop, step)
+#         # range(6, 0, -1)
+#         # range is stepping BACK
+#         # 6, 5, 4, 3, 2, 1
+
+#             for n in freq[i]:
+
+#                 # for a num inside of frequency arr
+#                 res.append(n)
+#                 # append num
+#                 if len(res) == k:
+#                     print("res ", res)
+#                     # if the length of the res == k
+#                     return res
+
+# nums = [1,1,1,2,2,3]
+# k = 2
+# solution = Solution()
+# print(solution.topKFrequent(nums, k))
 
 # MUST RETURN ELEMENTS WITH THE HIGHEST FREQUENCY
 # not OF the highest frequency
@@ -98,19 +98,77 @@ print(solution.topKFrequent(nums, k))
 # return the k most frequent elements
 
 
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        count = {}
-        freq = [[] for i in range(len(nums) + 1)]
+# class Solution:
+#     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+#         count = {}
+#         freq = [[] for i in range(len(nums) + 1)]
 
-        for n in nums:
-            count[n] = 1 + count.get(n, 0)
-        for n, c in count.items():
-            freq[c].append(n)
+#         for n in nums:
+#             count[n] = 1 + count.get(n, 0)
+#         for n, c in count.items():
+#             freq[c].append(n)
 
-        res = []
-        for i in range(len(freq) - 1, 0, -1):
-            for n in freq[i]:
-                res.append(n)
-                if len(res) == k:
-                    return res
+#         res = []
+#         for i in range(len(freq) - 1, 0, -1):
+#             for n in freq[i]:
+#                 res.append(n)
+#                 if len(res) == k:
+#                     return res
+
+
+
+
+# def topKFrequent(nums, k):
+#     """
+#     :type nums: List[int]
+#     :type k: int
+#     :rtype: List[int]
+#     """
+
+#     ctr = {}
+
+#     for num in nums:
+#         if num in ctr:
+#             ctr[num] += 1
+#         else:
+#             ctr[num] = 1
+
+#     sort = sorted(ctr.items(), key=lambda x:x[1], reverse=True)
+#     ctr = dict(sort)
+
+#     ans = []
+#     vals = list(ctr.keys())
+#     print("cvals ", vals)
+#     print(vals[1])
+#     for i in range(k):
+#         ans.append(vals[i])
+
+#     return ans
+
+# print(topKFrequent([4,1,-1,2,-1,2,3], 2))
+
+
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+
+        ctr = {}
+
+        for num in nums:
+            if num in ctr:
+                ctr[num] += 1
+            else:
+                ctr[num] = 1
+
+        sort = sorted(ctr.items(), key=lambda x:x[1], reverse=True)
+        print(sort)
+        nctr = dict(sort)
+        print(nctr)
+        keys = list(ctr.keys())
+        print(keys)
+        return keys[:k]
+        

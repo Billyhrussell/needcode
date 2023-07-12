@@ -141,10 +141,42 @@
 # arr = [1, 2, 3]
 # print(arr[-1])
 
-str = 'AAABBBABAB'
-print(str.split('A'))
-print(str.split('B'))
+# str = 'AAABBBABAB'
+# print(str.split('A'))
+# print(str.split('B'))
 
-a = str.split('A')
+# a = str.split('A')
 
-print(len(max(a, key=len)))
+# print(len(max(a, key=len)))
+
+
+# string = "string"
+# print(len(string))
+
+# dp = [0] * len(string)
+# print(dp)
+
+# print(string[6])
+
+
+# for i in range(3):
+#     print(i)
+
+# events = [[1,2],[2,3],[3,4],[1,2]]
+# events.sort()
+# print(events)
+
+
+t = {"a" : 1,
+     "b" : 1}
+s = {"b" : 1,
+     "a" : 1}
+
+if s == t:
+    print(True)
+
+print(ord("a"))
+
+print(ord("b"))
+
+print(ord("b") - ord("a"))
