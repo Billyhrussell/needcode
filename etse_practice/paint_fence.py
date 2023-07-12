@@ -30,6 +30,7 @@ def paint_fences(n, k):
 
     total = 0
 
+    # range(start,stop)
     for i in range(3, k-1):
 
         same, diff = diff, (same + diff) * (k-1)
