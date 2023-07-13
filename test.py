@@ -187,6 +187,13 @@ str = "  hello there   "
 
 # ls = list(str)
 
-ls = str.split()
+# ls = str.split()
 
-print(ls)
+# print(ls)
+
+nums = [1,2,3]
+zs = [0, 0]
+
+# print(nums.append(zs))
+nums.append(*zs)
+print(nums)
