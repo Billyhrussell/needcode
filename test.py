@@ -167,16 +167,26 @@
 # print(events)
 
 
-t = {"a" : 1,
-     "b" : 1}
-s = {"b" : 1,
-     "a" : 1}
+# t = {"a" : 1,
+#      "b" : 1}
+# s = {"b" : 1,
+#      "a" : 1}
 
-if s == t:
-    print(True)
+# if s == t:
+#     print(True)
 
-print(ord("a"))
+# print(ord("a"))
 
-print(ord("b"))
+# print(ord("b"))
 
-print(ord("b") - ord("a"))
+# print(ord("b") - ord("a"))
+
+ans = [""] * 3
+
+str = "  hello there   "
+
+# ls = list(str)
+
+ls = str.split()
+
+print(ls)

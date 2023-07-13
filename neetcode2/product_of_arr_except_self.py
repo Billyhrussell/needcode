@@ -10,7 +10,8 @@ def productExceptSelf(nums):
     right = [1] * n
 
     # 1, 2, 3
-    # RANGE ends AT n, not before
+    # RANGE ends before n
+    # aka range = 1, 2, 3
     # start at 1
     for i in range(1,n):
         left[i] = left[i-1] * nums[i - 1]
