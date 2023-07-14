@@ -191,9 +191,16 @@ str = "  hello there   "
 
 # print(ls)
 
-nums = [1,2,3]
-zs = [0, 0]
+# nums = [1,2,3]
+# zs = [0, 0]
 
-# print(nums.append(zs))
-nums.append(*zs)
+# # print(nums.append(zs))
+# nums.append(*zs)
+# print(nums)
+
+
+nums = [1,2,3,4,3]
+
+nums.remove(3)
+
 print(nums)
